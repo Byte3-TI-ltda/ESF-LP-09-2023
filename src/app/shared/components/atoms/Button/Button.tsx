@@ -1,5 +1,5 @@
 import "./Button.scss";
 
-export const Button: React.FC<{ text: string }> = ({ text }) => {
-  return <button>{text}</button>;
+export const Button: React.FC<{ type: 'submit' | 'button', value: string }> = ({ type, value }) => {
+  return <button type={type} className="btn btn-dark text-uppercase">{value}</button>;
 };

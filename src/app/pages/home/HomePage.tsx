@@ -1,6 +1,12 @@
+import { BasicTemplate } from "../../shared/components/templates/BasicTemplate/BasicTemplate";
 import { UseDocumentTitle } from "../../shared/hooks/UseDocumentTitleHook";
+import { ApplicationForm } from "../../shared/components/molecules/ApplicationForm/ApplicationForm";
+
+const FrameSignUp = () => {
+  return <ApplicationForm />;
+};
 
 export const HomePage: React.FC<{}> = () => {
   UseDocumentTitle("Home");
-  return <h4 className="">Works!</h4>;
+  return <BasicTemplate children={FrameSignUp()} />;
 };
