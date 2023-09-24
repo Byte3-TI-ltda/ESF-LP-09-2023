@@ -1,14 +1,1 @@
-.carousel-indicators [data-bs-target] {
-  width: 40% !important;
-  background-color: rgba(var(--bs-dark-rgb), 0.2) !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  height: 0.16rem !important;
-}
 
-.carousel-indicators {
-  margin-bottom: 0;
-  .active {
-    background-color: var(--bs-dark) !important;
-  }
-}

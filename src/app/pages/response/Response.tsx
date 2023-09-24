@@ -2,18 +2,33 @@ import { Carousel } from "react-bootstrap";
 import { BasicTemplate } from "../../shared/components/templates/BasicTemplate/BasicTemplate";
 import { UseDocumentTitle } from "../../shared/hooks/UseDocumentTitleHook";
 import { Section } from "../../shared/components/organisms/Section/Section";
+import { ThanksForTouSignUpFrame } from "./Frames/ThanksForTouSignUp/ThanksForTouSignUpFrame";
+import { StayTunedFrame } from "./Frames/StayTuned/StayTunedFrame";
+import { LearnMoreFrame } from "./Frames/LearnMore/LearnMoreFrame";
+
+const ItemThanksForTouSignUpFrame = () => {
+  return <ThanksForTouSignUpFrame />;
+};
+
+const ItemStayTunedFrame = () => {
+  return <StayTunedFrame />;
+};
+
+const ItemLearnMoreFrame = () => {
+  return <LearnMoreFrame />;
+};
 
 const ResponseCarousel = () => {
   return (
     <Carousel controls={false} interval={null}>
       <Carousel.Item className="slide">
-        <Section children={<p>item 1</p>} />
+        <Section children={ItemThanksForTouSignUpFrame()} />
       </Carousel.Item>
       <Carousel.Item className="slide">
-        <Section children={<p>item 2</p>} />
+        <Section children={ItemStayTunedFrame()} />
       </Carousel.Item>
       <Carousel.Item className="slide">
-        <Section children={<p>item 3</p>} />
+        <Section children={ItemLearnMoreFrame()} />
       </Carousel.Item>
     </Carousel>
   );
