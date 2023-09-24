@@ -1,36 +1,26 @@
-import { useState } from "react";
 import "./ApplicationForm.scss";
-import { Input } from "../../atoms/Input/Input";
 import { Col, Form, Row } from "react-bootstrap";
 import { Button } from "../../atoms/Button/Button";
 import { TextTitle } from "../../atoms/TextTitle/TextTitle";
+import { useForm, SubmitHandler } from "react-hook-form";
+
+type inputs = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  whatsapp: string;
+};
 
 export const ApplicationForm: React.FC<{}> = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [whatsapp, setWhatsapp] = useState("");
+  const {
+    register,
+    handleSubmit,
+    //watch,
+    formState: { errors },
+  } = useForm<inputs>();
 
-  const handleFirstNameChange = (event: any) => {
-    setFirstName(event.target.value);
-  };
-
-  const handleLastNameChange = (event: any) => {
-    setLastName(event.target.value);
-  };
-
-  const handleEmailChange = (event: any) => {
-    setEmail(event.target.value);
-  };
-
-  const handleWhatsappChange = (event: any) => {
-    setWhatsapp(event.target.value);
-  };
-
-  const handleFormSubmit = (event: any) => {
-    console.log(event);
-    event.preventDefault();
-  };
+  const onSubmit: SubmitHandler<inputs> = (data) => console.log(data);
+  //console.log(watch("firstName"));
 
   return (
     <div className="px-3">
@@ -42,13 +32,15 @@ export const ApplicationForm: React.FC<{}> = () => {
         </Col>
       </Row>
 
-      <Form onSubmit={handleFormSubmit} className="text-center my-4">
+      <Form onSubmit={handleSubmit(onSubmit)} className="text-center my-4">
         <Row className="justify-content-center my-3">
           <Col className="col-sm-12 col-md-4">
-            <Input
+            <input
+              className={`form-control bg-dark text-white ${
+                errors.firstName ? "is-invalid" : ""
+              }`}
               type="text"
-              value={firstName}
-              onChange={handleFirstNameChange}
+              {...register("firstName", { required: true })}
               placeholder={"Nome"}
             />
           </Col>
@@ -56,10 +48,12 @@ export const ApplicationForm: React.FC<{}> = () => {
 
         <Row className="justify-content-center my-3">
           <Col className="col-sm-12 col-md-4">
-            <Input
+            <input
+              className={`form-control bg-dark text-white ${
+                errors.lastName ? "is-invalid" : ""
+              }`}
               type="text"
-              value={lastName}
-              onChange={handleLastNameChange}
+              {...register("lastName", { required: true })}
               placeholder={"Sobrenome"}
             />
           </Col>
@@ -67,10 +61,12 @@ export const ApplicationForm: React.FC<{}> = () => {
 
         <Row className="justify-content-center my-3">
           <Col className="col-sm-12 col-md-4">
-            <Input
+            <input
+              className={`form-control bg-dark text-white ${
+                errors.email ? "is-invalid" : ""
+              }`}
               type="text"
-              value={email}
-              onChange={handleEmailChange}
+              {...register("email", { required: true })}
               placeholder={"E-mail"}
             />
           </Col>
@@ -78,10 +74,12 @@ export const ApplicationForm: React.FC<{}> = () => {
 
         <Row className="justify-content-center my-3">
           <Col className="col-sm-12 col-md-4">
-            <Input
+            <input
+              className={`form-control bg-dark text-white ${
+                errors.whatsapp ? "is-invalid" : ""
+              }`}
               type="text"
-              value={whatsapp}
-              onChange={handleWhatsappChange}
+              {...register("whatsapp", { required: true })}
               placeholder={"Whatsapp"}
             />
           </Col>
