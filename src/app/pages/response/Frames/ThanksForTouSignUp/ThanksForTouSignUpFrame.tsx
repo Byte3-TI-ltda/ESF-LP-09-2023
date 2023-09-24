@@ -20,18 +20,22 @@ export const ThanksForTouSignUpFrame: React.FC<{}> = () => {
         </Col>
       </Row>
 
-      <Row className="justify-content-center my-3 p-0">
-        <Col className="col-3 col-sm-3 d-flex justify-content-center">
-          <SocialButton value={"+"} />
-        </Col>
-        <Col className="col-3 col-sm-3 d-flex justify-content-center">
-          <SocialButton value={"+"} />
-        </Col>
-        <Col className="col-3 col-sm-3 d-flex justify-content-center">
-          <SocialButton value={"+"} />
-        </Col>
-        <Col className="col-3 col-sm-3 d-flex justify-content-center">
-          <SocialButton value={"+"} />
+      <Row className="justify-content-center mt-2">
+        <Col className="col-sm-12 col-md-4">
+          <Row className="justify-content-center my-0 p-0">
+            <Col className="col-3 col-sm-3 d-flex justify-content-center">
+              <SocialButton value={"+"} />
+            </Col>
+            <Col className="col-3 col-sm-3 d-flex justify-content-center">
+              <SocialButton value={"+"} />
+            </Col>
+            <Col className="col-3 col-sm-3 d-flex justify-content-center">
+              <SocialButton value={"+"} />
+            </Col>
+            <Col className="col-3 col-sm-3 d-flex justify-content-center">
+              <SocialButton value={"+"} />
+            </Col>
+          </Row>
         </Col>
       </Row>
 
