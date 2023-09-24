@@ -6,7 +6,7 @@ import { SocialButton } from "../../../../shared/components/atoms/SocialButton/S
 export const ThanksForTouSignUpFrame: React.FC<{}> = () => {
   return (
     <div className="px-3 text-center">
-      <Row className="justify-content-center my-2">
+      <Row className="justify-content-center my-3">
         <Col className="col-sm-12 col-md-4">
           <h3 className="text-center mx-4">Obrigado por se inscrever!</h3>
         </Col>

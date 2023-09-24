@@ -14,7 +14,7 @@ export const BasicTemplate: React.FC<BasicTemplateProps> = ({ children }) => {
   return (
     <Container fluid={true} className="min-vh-100 d-block overflow-y-hidden">
       <Header children={HeaderChildren()} />
-      <body>{children}</body>
+      <>{children}</>
     </Container>
   );
 };
