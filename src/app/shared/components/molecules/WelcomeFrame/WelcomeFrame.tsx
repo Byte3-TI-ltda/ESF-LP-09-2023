@@ -7,7 +7,7 @@ export const WelcomeFrame: React.FC<{}> = () => {
     <div className="px-3">
       <Row className="justify-content-center my-3">
         <Col className="col-sm-12 col-md-4">
-          <iframe
+          <iframe title="video title"
             width="100%"
             height="auto"
             src="https://www.youtube.com/embed/tgbNymZ7vqY"
