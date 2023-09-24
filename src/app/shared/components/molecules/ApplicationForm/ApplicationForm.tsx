@@ -1,7 +1,6 @@
 import "./ApplicationForm.scss";
 import { Col, Form, Row } from "react-bootstrap";
 import { Button } from "../../atoms/Button/Button";
-import { TextTitle } from "../../atoms/TextTitle/TextTitle";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 type inputs = {
@@ -26,9 +25,9 @@ export const ApplicationForm: React.FC<{}> = () => {
     <div className="px-3">
       <Row className="justify-content-center my-3">
         <Col className="col-sm-12 col-md-4">
-          <TextTitle
-            value={"Inscreva-se e tenha acesso a conteúdos exclusivos!"}
-          />
+          <h3 className="text-center mx-4">
+            Inscreva-se e tenha acesso a conteúdos exclusivos!
+          </h3>
         </Col>
       </Row>
 

@@ -6,8 +6,8 @@ export const Logo: React.FC<{}> = () => {
       <img
         src={process.env.PUBLIC_URL + "/logo192.png"}
         alt="logo"
-        width={64}
-        height={64}
+        width={56}
+        height={56}
       />
     </div>
   );
