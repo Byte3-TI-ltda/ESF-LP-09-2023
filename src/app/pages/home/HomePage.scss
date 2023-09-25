@@ -1,1 +1,11 @@
+.slideCounter {
+    position: absolute;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
+    .invisible {
+        visibility: 0;
+    }
+}
