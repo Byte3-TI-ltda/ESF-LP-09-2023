@@ -1,5 +1,10 @@
-$body-bg: #ffffff !default;
-$body-color: #2e2e2e !default;
+$esf-body-bg: #000000 !default;
+$esf-body-color: #ffffff !default;
+
+//
+
+$body-bg: $esf-body-bg !default;
+$body-color: $esf-body-color !default;
 
 $input-btn-border-width: 0 !default;
 $border-radius: 0.2rem !default;
