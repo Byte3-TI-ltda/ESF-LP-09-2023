@@ -1,41 +1,76 @@
 import "./WelcomeFrame.scss";
-import { Button } from "../../atoms/Button/Button";
 import { Col, Row } from "react-bootstrap";
+import { ApplicationForm } from "../ApplicationForm/ApplicationForm";
+import { useNavigate } from "react-router-dom";
+import YouTube, { YouTubeProps } from "react-youtube";
+import { useState } from "react";
 
 export const WelcomeFrame: React.FC<{}> = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/inscrevase");
+  };
+
+  const [play] = useState(1);
+
+  const videoOptions: YouTubeProps["opts"] = {
+    playerVars: {
+      autoplay: play,
+      controls: 0,
+      rel: 0,
+      showinfo: 0,
+      mute: 0,
+      loop: 1,
+    },
+  };
+
   return (
-    <div className="px-3 text-center">
-      <Row className="justify-content-center my-3">
-        <Col className="col-sm-12 col-md-4">
-          <iframe
-            title="video title"
-            width="100%"
-            height="auto"
-            src="https://www.youtube.com/embed/tgbNymZ7vqY"
-          ></iframe>
-        </Col>
-      </Row>
+    <Row className="justify-content-center p-2">
+      <Col className="col-sm-12 col-md-8 col-lg-6 px-lg-5">
+        <div className="d-flex flex-column flex-lg-column-reverse">
+          <Row className="justify-content-center mt-5">
+            <Col className="col-sm-12 mb-sm-2">
+              <YouTube
+                videoId="tgbNymZ7vqY"
+                opts={videoOptions}
+                className="youtube-container"
+              />
+            </Col>
+          </Row>
+          <Row className="justify-content-center mt-5 mb-lg-4">
+            <Col className="col-sm-12 p-0">
+              <h1 className="text-center mx-5 text-uppercase text-scale lh-1 fw-semibold">
+                sinta a emoção da descoberta
+              </h1>
+            </Col>
+          </Row>
+        </div>
 
-      <Row className="justify-content-center my-3">
-        <Col className="col-sm-12 col-md-4">
-          <h3 className="text-center mx-4">Titulo de chamada</h3>
-        </Col>
-      </Row>
+        <Row className="justify-content-center mt-5">
+          <Col className="col-sm-12">
+            <p className="text-center mx-0 fs-4 lh-1 px-lg-5">
+              Essa é a sua chance de ser um Explorador Sem Fronteiras e deixar a
+              sua marca na história!
+            </p>
+          </Col>
+        </Row>
 
-      <Row className="justify-content-center my-1">
-        <Col className="col-sm-12 col-md-4">
-          <p className="text-center mx-0 small">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua
-          </p>
-        </Col>
-      </Row>
-
-      <Row className="justify-content-center mt-2">
-        <Col className="col-sm-12 col-md-4">
-          <Button type="button" value="botão de ação" />
-        </Col>
-      </Row>
-    </div>
+        <Row className="d-sm-block d-lg-none justify-content-center mt-4">
+          <Col className="col-sm-12 text-center">
+            <button
+              type="button"
+              className="btn btn-primary text-uppercase fw-bold fs-3 px-5"
+              onClick={handleClick}
+            >
+              inscreva-se
+            </button>
+          </Col>
+        </Row>
+      </Col>
+      <Col className="col-sm-12 col-md-8 col-lg-6 px-lg-5 d-none d-lg-block">
+        <ApplicationForm />
+      </Col>
+    </Row>
   );
 };

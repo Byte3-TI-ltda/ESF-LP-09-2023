@@ -1,13 +1,31 @@
-$body-bg: #ffffff !default;
-$body-color: #2e2e2e !default;
+$esf-body-bg: #000000 !default;
+$esf-body-color: #ffffff !default;
 
+//primárias
+$esf-dark: #743800 !default;
+$esf-light: #ffdd63 !default;
+$esf-primary: #ffcc12 !default;
+//secundarias
+$esf-secondary: #0011bc !default;
+$esf-info: #2441ff !default;
+
+//bootstrap global vars
+$primary: $esf-primary !default;
+$dark: $esf-dark !default;
+$light: $esf-light !default;
+$secondary: $esf-secondary !default;
+$info: $esf-info !default;
+$body-bg: $esf-body-bg !default;
+$body-color: $esf-body-color !default;
+
+//
 $input-btn-border-width: 0 !default;
-$border-radius: 0.2rem !default;
+$border-radius: 0rem !default;
 
 // Buttons
 
 $btn-line-height: 1.5rem !default;
-$input-btn-padding-y: 0.5rem !default;
+$input-btn-padding-y: 0.8rem !default;
 $input-btn-padding-x: 1rem !default;
 $input-btn-padding-y-sm: 0.5rem !default;
 $input-btn-padding-x-sm: 1rem !default;
@@ -24,9 +42,14 @@ $input-btn-padding-x-lg: 2rem !default;
 
 .carousel-indicators {
   margin-bottom: 0;
+
   .active {
     background-color: var(--bs-dark) !important;
   }
+}
+
+.text-scale {
+  transform: scaleY(1.6);
 }
 
 @import "~bootstrap/scss/bootstrap.scss";

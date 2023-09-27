@@ -12,7 +12,7 @@ const HeaderChildren = () => {
 
 export const BasicTemplate: React.FC<BasicTemplateProps> = ({ children }) => {
   return (
-    <Container fluid={true} className="min-vh-100 d-block overflow-y-hidden">
+    <Container fluid={false}>
       <Header children={HeaderChildren()} />
       <>{children}</>
     </Container>
