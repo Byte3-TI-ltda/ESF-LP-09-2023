@@ -40,7 +40,7 @@ export const WelcomeFrame: React.FC<{}> = () => {
           </Row>
           <Row className="justify-content-center mt-5 mt-lg-0 mb-lg-2">
             <Col className="col-sm-12 p-0">
-              <h1 className="text-center mx-4 text-uppercase fs-bebas-neue lh-1 fs-custom_w">
+              <h1 className="text-center mx-5 text-uppercase fs-bebas-neue lh-1 fs-custom_w">
                 sinta a emoção da descoberta
               </h1>
             </Col>
@@ -49,7 +49,7 @@ export const WelcomeFrame: React.FC<{}> = () => {
 
         <Row className="justify-content-center mt-4 mt-lg-5">
           <Col className="col-sm-12">
-            <p className="text-center mx-4 lh-1 px-lg-5">
+            <p className="text-center mx-3 lh-1 px-lg-5 fs-5">
               Essa é a sua chance de ser um Explorador Sem Fronteiras e deixar a
               sua marca na história!
             </p>
@@ -60,7 +60,7 @@ export const WelcomeFrame: React.FC<{}> = () => {
           <Col className="col-sm-12 text-center">
             <button
               type="button"
-              className="btn btn-primary text-uppercase fw-bold fs-3 px-5"
+              className="btn btn-primary text-uppercase fw-bold fs-3 px-4"
               onClick={handleClick}
             >
               inscreva-se

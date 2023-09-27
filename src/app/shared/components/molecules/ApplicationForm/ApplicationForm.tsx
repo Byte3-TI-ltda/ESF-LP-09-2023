@@ -31,7 +31,7 @@ export const ApplicationForm: React.FC<{}> = () => {
         </Col>
       </Row>
 
-      <Form onSubmit={handleSubmit(onSubmit)} className="text-center mt-2 mt-lg-4">
+      <Form onSubmit={handleSubmit(onSubmit)} className="text-center mt-3 mt-lg-4">
         <Row className="justify-content-center">
           <Col className="col-sm-12">
             <input
