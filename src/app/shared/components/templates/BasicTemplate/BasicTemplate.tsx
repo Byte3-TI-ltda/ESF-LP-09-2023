@@ -12,9 +12,11 @@ const HeaderChildren = () => {
 
 export const BasicTemplate: React.FC<BasicTemplateProps> = ({ children }) => {
   return (
-    <Container fluid={false}>
+    <div className="d-flex flex-column vh-100 py-2">
       <Header children={HeaderChildren()} />
-      <>{children}</>
-    </Container>
+      <Container className="d-flex align-items-center justify-content-center flex-grow-1 py-lg-5">
+        {children}
+      </Container>
+    </div>
   );
 };
