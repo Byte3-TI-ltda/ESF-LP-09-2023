@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Public+Sans:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600&display=swap");
+
+* {
+  font-family: "Public Sans";
+}
+
 $esf-body-bg: #000000 !default;
 $esf-body-color: #ffffff !default;
 
@@ -48,8 +55,8 @@ $input-btn-padding-x-lg: 2rem !default;
   }
 }
 
-.text-scale {
-  transform: scaleY(1.6);
+.fs-bebas-neue {
+  font-family: 'Bebas Neue'
 }
 
 @import "~bootstrap/scss/bootstrap.scss";

@@ -29,7 +29,7 @@ export const WelcomeFrame: React.FC<{}> = () => {
     <Row className="justify-content-center p-2">
       <Col className="col-sm-12 col-md-8 col-lg-6 px-lg-5">
         <div className="d-flex flex-column flex-lg-column-reverse">
-          <Row className="justify-content-center mt-5">
+          <Row className="justify-content-center mt-0 mt-lg-5">
             <Col className="col-sm-12 mb-sm-2">
               <YouTube
                 videoId="tgbNymZ7vqY"
@@ -38,18 +38,18 @@ export const WelcomeFrame: React.FC<{}> = () => {
               />
             </Col>
           </Row>
-          <Row className="justify-content-center mt-5 mb-lg-4">
+          <Row className="justify-content-center mt-5 mt-lg-0 mb-lg-2">
             <Col className="col-sm-12 p-0">
-              <h1 className="text-center mx-5 text-uppercase text-scale lh-1 fw-semibold">
+              <h1 className="text-center mx-4 text-uppercase fs-bebas-neue lh-1 fs-custom_w">
                 sinta a emoção da descoberta
               </h1>
             </Col>
           </Row>
         </div>
 
-        <Row className="justify-content-center mt-5">
+        <Row className="justify-content-center mt-4 mt-lg-5">
           <Col className="col-sm-12">
-            <p className="text-center mx-0 fs-4 lh-1 px-lg-5">
+            <p className="text-center mx-4 lh-1 px-lg-5">
               Essa é a sua chance de ser um Explorador Sem Fronteiras e deixar a
               sua marca na história!
             </p>
