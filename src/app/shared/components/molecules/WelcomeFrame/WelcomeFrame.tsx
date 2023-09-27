@@ -27,12 +27,12 @@ export const WelcomeFrame: React.FC<{}> = () => {
 
   return (
     <Row className="justify-content-center p-2">
-      <Col className="col-sm-12 col-md-8 col-lg-6 px-lg-5">
+      <Col className="col-sm-12 col-md-10 col-lg-6 px-lg-5">
         <div className="d-flex flex-column flex-lg-column-reverse">
           <Row className="justify-content-center mt-0 mt-lg-5">
             <Col className="col-sm-12 mb-sm-2">
               <YouTube
-                videoId="tgbNymZ7vqY"
+                videoId="h0yPK_A1b74"
                 opts={videoOptions}
                 className="youtube-container"
               />
@@ -68,7 +68,7 @@ export const WelcomeFrame: React.FC<{}> = () => {
           </Col>
         </Row>
       </Col>
-      <Col className="col-sm-12 col-md-8 col-lg-6 px-lg-5 d-none d-lg-block">
+      <Col className="col-sm-12 col-md-10 col-lg-6 px-lg-5 d-none d-lg-block">
         <ApplicationForm />
       </Col>
     </Row>
