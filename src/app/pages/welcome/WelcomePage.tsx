@@ -13,28 +13,31 @@ export const WelcomePage: React.FC<{}> = () => {
         <div className="d-flex flex-column w-100">
           <Container className="p-0">
             <Row className="justify-content-center p-2">
-              <Col className="col-sm-12 col-md-10 col-lg-6 px-lg-5">
-                <Row className="justify-content-center mt-5 mt-lg-0 mb-lg-2">
+              <Col className="col-sm-12 col-md-10 col-lg-4 px-lg-4">
+                <Row className="justify-content-center mb-lg-2">
                   <Col className="col-sm-12 p-0">
                     <h1 className="text-center mx-5 text-uppercase fs-bebas-neue lh-1 fs-custom_w">
                       bem-vindo aos exploradores sem fronteiras
                     </h1>
                   </Col>
                 </Row>
-                <Row className="justify-content-center mt-4 mt-lg-5">
+                <Row className="justify-content-center mt-4 mt-lg-3">
                   <Col className="col-sm-12">
-                    <p className="text-center mx-3 lh-1 px-lg-5 fs-5">
+                    <p className="text-center lh-1 px-3 px-lg-5 fs-5">
                       Sua inscrição é o primeiro passo para embarcar em jornadas
                       incríveis!
                     </p>
                   </Col>
                 </Row>
               </Col>
-              <Col>
-                <Row className="justify-content-center mt-3 mt-lg-5">
+              <Col className="col-sm-12 col-md-10 col-lg-4 px-lg-4">
+                <Row className="justify-content-center mt-3 mt-lg-0">
                   <Col className="col-sm-12">
+                    <p className="text-center mx-3 lh-1 px-lg-5 fs-4 fw-bold mb-0">
+                      Não perca nossas atualizações.
+                    </p>
                     <p className="text-center mx-3 lh-1 px-lg-5 fs-4 fw-bold">
-                      Não perca nossas atualizações. Siga as nossas redes
+                      Siga as nossas redes
                       sociais!
                     </p>
                   </Col>
@@ -76,16 +79,16 @@ export const WelcomePage: React.FC<{}> = () => {
             </Row>
           </Container>
 
-          <Row className="justify-content-center p-0 bg-primary">
+          <Row className="justify-content-center p-0 bg-primary mt-lg-4">
             <Col className="col-sm-12">
               <Container>
                 <Row className="justify-content-center mt-4 mb-4 mb-lg-0 mt-lg-0">
-                  <Col className="col-12 col-lg-6 p-0 d-flex align-items-center justify-content-center">
-                    <h1 className="text-center mx-5 text-uppercase fs-bebas-neue lh-1 mb-0 fs-custom_w text-black">
+                  <Col className="col-12 col-lg-4 p-0 d-flex align-items-center justify-content-center">
+                    <h1 className="text-center mx-5 mx-lg-0 text-uppercase fs-bebas-neue lh-1 mb-0 fs-custom_w text-black">
                       confira nossas novidades!
                     </h1>
                   </Col>
-                  <Col className="col-12 col-lg-6 p-0 d-flex align-items-center justify-content-center">
+                  <Col className="col-12 col-lg-4 p-0 d-flex align-items-center justify-content-center">
                     <button
                       type="button"
                       className="btn btn-black text-primary bg-black text-uppercase fw-semibold fs-3 px-4 mt-2 my-lg-3"
