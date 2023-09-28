@@ -8,8 +8,8 @@ export const Inscrevase: React.FC<{}> = () => {
   return (
     <BasicTemplate
       children={
-        <Row className="justify-content-center mt-4">
-          <Col className="col-lg-6 w-100">
+        <Row className="justify-content-center">
+          <Col className="col-lg-10 px-lg-5">
             <ApplicationForm />
           </Col>
         </Row>

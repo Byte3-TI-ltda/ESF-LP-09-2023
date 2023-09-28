@@ -1,11 +1,11 @@
-import "./WelcomeFrame.scss";
+import "./HomeFrame.scss";
 import { Col, Row } from "react-bootstrap";
 import { ApplicationForm } from "../ApplicationForm/ApplicationForm";
 import { useNavigate } from "react-router-dom";
 import YouTube, { YouTubeProps } from "react-youtube";
 import { useState } from "react";
 
-export const WelcomeFrame: React.FC<{}> = () => {
+export const HomeFrame: React.FC<{}> = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -27,12 +27,12 @@ export const WelcomeFrame: React.FC<{}> = () => {
 
   return (
     <Row className="justify-content-center p-2">
-      <Col className="col-sm-12 col-md-8 col-lg-6 px-lg-5">
+      <Col className="col-sm-12 col-md-10 col-lg-6 px-lg-5">
         <div className="d-flex flex-column flex-lg-column-reverse">
           <Row className="justify-content-center mt-0 mt-lg-5">
             <Col className="col-sm-12 mb-sm-2">
               <YouTube
-                videoId="tgbNymZ7vqY"
+                videoId="h0yPK_A1b74"
                 opts={videoOptions}
                 className="youtube-container"
               />
@@ -40,7 +40,7 @@ export const WelcomeFrame: React.FC<{}> = () => {
           </Row>
           <Row className="justify-content-center mt-5 mt-lg-0 mb-lg-2">
             <Col className="col-sm-12 p-0">
-              <h1 className="text-center mx-5 text-uppercase fs-bebas-neue lh-1 fs-custom_w">
+              <h1 className="text-center mx-5 text-uppercase fs-bebas-neue lh-1 fs-custom_h">
                 sinta a emoção da descoberta
               </h1>
             </Col>
@@ -60,15 +60,15 @@ export const WelcomeFrame: React.FC<{}> = () => {
           <Col className="col-sm-12 text-center">
             <button
               type="button"
-              className="btn btn-primary text-uppercase fw-bold fs-3 px-4"
+              className="btn btn-primary text-uppercase fw-semibold fs-3 px-4"
               onClick={handleClick}
             >
-              inscreva-se
+              <span className="mx-2"> inscreva-se</span>
             </button>
           </Col>
         </Row>
       </Col>
-      <Col className="col-sm-12 col-md-8 col-lg-6 px-lg-5 d-none d-lg-block">
+      <Col className="col-sm-12 col-md-10 col-lg-6 px-lg-5 d-none d-lg-block">
         <ApplicationForm />
       </Col>
     </Row>

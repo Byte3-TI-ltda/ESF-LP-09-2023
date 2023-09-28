@@ -1,6 +1,5 @@
 import "./ApplicationForm.scss";
 import { Col, Form, Row } from "react-bootstrap";
-import { Button } from "../../atoms/Button/Button";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 type inputs = {
@@ -35,7 +34,7 @@ export const ApplicationForm: React.FC<{}> = () => {
         <Row className="justify-content-center">
           <Col className="col-sm-12">
             <input
-              className={`form-control bg-primary bg-opacity-10 border border-primary text-white ${errors.firstName ? "is-invalid" : ""
+              className={`form-control bg-primary bg-opacity-10 border border-primary text-white fw-semibold ${errors.firstName ? "is-invalid" : ""
                 }`}
               type="text"
               {...register("firstName", { required: true })}
@@ -47,7 +46,7 @@ export const ApplicationForm: React.FC<{}> = () => {
         <Row className="justify-content-center my-3">
           <Col className="col-sm-12">
             <input
-              className={`form-control bg-primary bg-opacity-10 border border-primary text-white ${errors.lastName ? "is-invalid" : ""
+              className={`form-control bg-primary bg-opacity-10 border border-primary text-white fw-semibold ${errors.lastName ? "is-invalid" : ""
                 }`}
               type="text"
               {...register("lastName", { required: true })}
@@ -59,7 +58,7 @@ export const ApplicationForm: React.FC<{}> = () => {
         <Row className="justify-content-center my-3">
           <Col className="col-sm-12">
             <input
-              className={`form-control bg-primary bg-opacity-10 border border-primary text-white ${errors.email ? "is-invalid" : ""
+              className={`form-control bg-primary bg-opacity-10 border border-primary text-white fw-semibold ${errors.email ? "is-invalid" : ""
                 }`}
               type="text"
               {...register("email", { required: true })}
@@ -71,7 +70,7 @@ export const ApplicationForm: React.FC<{}> = () => {
         <Row className="justify-content-center my-3">
           <Col className="col-sm-12">
             <input
-              className={`form-control bg-primary bg-opacity-10 border border-primary text-white ${errors.whatsapp ? "is-invalid" : ""
+              className={`form-control bg-primary bg-opacity-10 border border-primary text-white fw-semibold ${errors.whatsapp ? "is-invalid" : ""
                 }`}
               type="text"
               {...register("whatsapp", { required: true })}
@@ -82,7 +81,12 @@ export const ApplicationForm: React.FC<{}> = () => {
 
         <Row className="justify-content-center mt-4">
           <Col className="col-sm-12">
-            <Button type="submit" value="confirmar" />
+            <button
+              type="submit"
+              className="btn btn-primary text-uppercase fw-semibold fs-3 px-4"
+            >
+              <span className="mx-2">confirmar</span>
+            </button>
           </Col>
         </Row>
       </Form>
