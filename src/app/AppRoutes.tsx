@@ -10,6 +10,7 @@ export const AppRoutes = () => {
       <Route path="/" element={<Navigate to="/home" />} />
       <Route Component={Inscrevase} path="/inscrevase" />
       <Route Component={WelcomePage} path="/welcome" />
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 };
