@@ -1,12 +1,19 @@
-import axios from "axios";
+import axios, { AxiosInstance } from "axios";
 
-const baseURL = "https://...";
+const apiBaseURL = (): string => {
+    return "https://api-ur/";
+};
 
-export const ApiService = () => {
+const create = (): AxiosInstance => {
     return axios.create({
-        baseURL: baseURL,
+        baseURL: apiBaseURL(),
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
         },
     });
+};
+
+export const ApiService = {
+    apiBaseURL,
+    create,
 };
