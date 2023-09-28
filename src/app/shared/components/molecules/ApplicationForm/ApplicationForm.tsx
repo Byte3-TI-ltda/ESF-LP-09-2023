@@ -83,7 +83,7 @@ export const ApplicationForm: React.FC<{}> = () => {
           <Col className="col-sm-12">
             <button
               type="submit"
-              className="btn btn-primary text-uppercase fw-semibold fs-3 px-4"
+              className="btn btn-primary text-uppercase fw-semibold fs-4 px-4"
             >
               <span className="mx-2">confirmar</span>
             </button>

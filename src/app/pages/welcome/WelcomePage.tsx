@@ -91,7 +91,7 @@ export const WelcomePage: React.FC<{}> = () => {
                   <Col className="col-12 col-lg-4 p-0 d-flex align-items-center justify-content-center">
                     <button
                       type="button"
-                      className="btn btn-black text-primary bg-black text-uppercase fw-semibold fs-3 px-4 mt-2 my-lg-3"
+                      className="btn btn-black text-primary bg-black text-uppercase fw-semibold fs-4 px-4 mt-2 my-lg-3"
                     >
                       <span className="ms-5 me-2">ver mais</span>
                       <BsIcon iconName="ChevronRight" className="ms-3"></BsIcon>

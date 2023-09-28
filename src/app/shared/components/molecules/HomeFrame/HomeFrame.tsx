@@ -63,7 +63,7 @@ export const HomeFrame: React.FC<{}> = () => {
               className="btn btn-primary text-uppercase fw-semibold fs-3 px-4"
               onClick={handleClick}
             >
-              <span className="mx-2"> inscreva-se</span>
+              <span className="mx-2">inscreva-se</span>
             </button>
           </Col>
         </Row>
