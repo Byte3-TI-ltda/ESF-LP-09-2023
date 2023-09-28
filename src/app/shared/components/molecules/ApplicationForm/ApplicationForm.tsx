@@ -24,7 +24,7 @@ export const ApplicationForm: React.FC<{}> = () => {
     <div className="px-2 px-lg-0">
       <Row className="justify-content-center">
         <Col className="col-sm-12">
-          <h2 className="text-center mx-4 text-uppercase fs-bebas-neue lh-1 fs-custom_a">
+          <h2 className="text-center px-2 p-lg-0 text-uppercase fs-bebas-neue lh-1 fs-custom_a">
             Inscreva-se e tenha acesso a conteúdos exclusivos!
           </h2>
         </Col>

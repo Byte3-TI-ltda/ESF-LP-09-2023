@@ -12,7 +12,7 @@ export const WelcomePage: React.FC<{}> = () => {
       children={
         <div className="d-flex flex-column w-100">
           <Container className="p-0">
-            <Row className="justify-content-center p-2">
+            <Row className="justify-content-center justify-content-lg-around p-2">
               <Col className="col-sm-12 col-md-10 col-lg-4 px-lg-4">
                 <Row className="justify-content-center mb-lg-2">
                   <Col className="col-sm-12 p-0">
@@ -79,10 +79,10 @@ export const WelcomePage: React.FC<{}> = () => {
             </Row>
           </Container>
 
-          <Row className="justify-content-center p-0 bg-primary mt-lg-4">
+          <Row className="p-0 bg-primary mt-lg-4">
             <Col className="col-sm-12">
               <Container>
-                <Row className="justify-content-center mt-4 mb-4 mb-lg-0 mt-lg-0">
+                <Row className="justify-content-center justify-content-lg-around mt-4 mb-4 mb-lg-0 mt-lg-0">
                   <Col className="col-12 col-lg-4 p-0 d-flex align-items-center justify-content-center">
                     <h1 className="text-center mx-5 mx-lg-0 text-uppercase fs-bebas-neue lh-1 mb-0 fs-custom_w text-black">
                       confira nossas novidades!
