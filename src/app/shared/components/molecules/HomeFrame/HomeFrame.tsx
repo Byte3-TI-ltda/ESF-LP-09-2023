@@ -2,8 +2,6 @@ import "./HomeFrame.scss";
 import { Col, Row } from "react-bootstrap";
 import { ApplicationForm } from "../ApplicationForm/ApplicationForm";
 import { useNavigate } from "react-router-dom";
-import YouTube, { YouTubeProps } from "react-youtube";
-import { useState } from "react";
 
 export const HomeFrame: React.FC<{}> = () => {
   const navigate = useNavigate();
@@ -12,29 +10,15 @@ export const HomeFrame: React.FC<{}> = () => {
     navigate("/inscrevase");
   };
 
-  const [play] = useState(1);
-
-  const videoOptions: YouTubeProps["opts"] = {
-    playerVars: {
-      autoplay: play,
-      controls: 0,
-      rel: 0,
-      showinfo: 0,
-      mute: 0,
-      loop: 1,
-    },
-  };
-
   return (
     <Row className="justify-content-center justify-content-lg-around p-2">
-      <Col className="col-sm-12 col-md-10 col-lg-4 px-lg-4">
+      <Col className="col-sm-12 col-md-10 col-lg-4 col-scale px-lg-4">
         <div className="d-flex flex-column flex-lg-column-reverse">
-          <Row className="justify-content-center mt-0 mt-lg-5">
+          <Row className="justify-content-center mt-0 mt-lg-1">
             <Col className="col-sm-12 mb-sm-2">
-              <YouTube
-                videoId="h0yPK_A1b74"
-                opts={videoOptions}
-                className="youtube-container"
+              <iframe className="youtube-container" src="https://www.youtube.com/embed/h0yPK_A1b74?si=nuwB0XcPtmQ3wOmr?&autoplay=1&mute=1"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               />
             </Col>
           </Row>
@@ -47,7 +31,7 @@ export const HomeFrame: React.FC<{}> = () => {
           </Row>
         </div>
 
-        <Row className="justify-content-center mt-4 mt-lg-5">
+        <Row className="justify-content-center mt-4 mt-lg-1">
           <Col className="col-sm-12">
             <p className="text-center lh-1 px-lg-2 fs-5">
               Essa é a sua chance de ser um Explorador Sem Fronteiras e deixar a
@@ -68,7 +52,7 @@ export const HomeFrame: React.FC<{}> = () => {
           </Col>
         </Row>
       </Col>
-      <Col className="col-sm-12 col-md-10 col-lg-4 px-lg-4 d-none d-lg-block">
+      <Col className="col-sm-12 col-md-10 col-lg-4 col-scale px-lg-4 d-none d-lg-block">
         <ApplicationForm />
       </Col>
     </Row>

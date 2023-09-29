@@ -9,7 +9,7 @@ export const Inscrevase: React.FC<{}> = () => {
     <BasicTemplate
       children={
         <Row className="justify-content-center">
-          <Col className="col-lg-10 px-lg-5">
+          <Col className="col-lg-10 col-scale px-lg-5">
             <ApplicationForm />
           </Col>
         </Row>
