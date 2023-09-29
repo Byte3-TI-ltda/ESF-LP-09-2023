@@ -26,8 +26,8 @@ export const HomeFrame: React.FC<{}> = () => {
   };
 
   return (
-    <Row className="justify-content-center p-2">
-      <Col className="col-sm-12 col-md-10 col-lg-6 px-lg-5">
+    <Row className="justify-content-center justify-content-lg-around p-2">
+      <Col className="col-sm-12 col-md-10 col-lg-4 px-lg-4">
         <div className="d-flex flex-column flex-lg-column-reverse">
           <Row className="justify-content-center mt-0 mt-lg-5">
             <Col className="col-sm-12 mb-sm-2">
@@ -49,7 +49,7 @@ export const HomeFrame: React.FC<{}> = () => {
 
         <Row className="justify-content-center mt-4 mt-lg-5">
           <Col className="col-sm-12">
-            <p className="text-center mx-3 lh-1 px-lg-5 fs-5">
+            <p className="text-center lh-1 px-lg-2 fs-5">
               Essa é a sua chance de ser um Explorador Sem Fronteiras e deixar a
               sua marca na história!
             </p>
@@ -63,12 +63,12 @@ export const HomeFrame: React.FC<{}> = () => {
               className="btn btn-primary text-uppercase fw-semibold fs-3 px-4"
               onClick={handleClick}
             >
-              <span className="mx-2"> inscreva-se</span>
+              <span className="mx-2">inscreva-se</span>
             </button>
           </Col>
         </Row>
       </Col>
-      <Col className="col-sm-12 col-md-10 col-lg-6 px-lg-5 d-none d-lg-block">
+      <Col className="col-sm-12 col-md-10 col-lg-4 px-lg-4 d-none d-lg-block">
         <ApplicationForm />
       </Col>
     </Row>
