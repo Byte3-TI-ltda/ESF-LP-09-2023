@@ -1,6 +1,9 @@
 import "./ApplicationForm.scss";
-import { Col, Form, Row } from "react-bootstrap";
+import { Col, Form, Row, Spinner } from "react-bootstrap";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import { ApiService } from "../../../../services/ApiService";
+import { useState } from "react";
 
 type inputs = {
   firstName: string;
@@ -10,6 +13,10 @@ type inputs = {
 };
 
 export const ApplicationForm: React.FC<{}> = () => {
+
+  const navigate = useNavigate();
+  const [enviando, setEnviando] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -17,7 +24,18 @@ export const ApplicationForm: React.FC<{}> = () => {
     formState: { errors },
   } = useForm<inputs>();
 
-  const onSubmit: SubmitHandler<inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<inputs> = async (data) => {
+    try {
+      setEnviando(true);
+      const response = await ApiService.create().post('/endpoint', data);
+      console.log(response.data);
+      navigate("/welcome");
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setEnviando(false);
+    }
+  }
   //console.log(watch("firstName"));
 
   return (
@@ -61,7 +79,7 @@ export const ApplicationForm: React.FC<{}> = () => {
               className={`form-control bg-primary bg-opacity-10 border border-primary text-white fw-semibold ${errors.email ? "is-invalid" : ""
                 }`}
               type="text"
-              {...register("email", { required: true })}
+              {...register("email", { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ })}
               placeholder={"E-mail"}
             />
           </Col>
@@ -73,19 +91,33 @@ export const ApplicationForm: React.FC<{}> = () => {
               className={`form-control bg-primary bg-opacity-10 border border-primary text-white fw-semibold ${errors.whatsapp ? "is-invalid" : ""
                 }`}
               type="text"
-              {...register("whatsapp", { required: true })}
+              {...register("whatsapp", { required: true, pattern: /^\d{2}\s?([2-9]{1})(\d{3,4})\s?(\d{4})$/ })}
               placeholder={"Whatsapp"}
             />
           </Col>
         </Row>
 
         <Row className="justify-content-center mt-4">
-          <Col className="col-sm-12">
+          <Col className="col-sm-12 d-flex justify-content-center">
             <button
               type="submit"
-              className="btn btn-primary text-uppercase fw-semibold fs-4 px-4"
+              className="btn btn-primary text-uppercase fw-semibold fs-3 px-4 d-flex align-items-center"
+              disabled={enviando}
             >
-              <span className="mx-2">confirmar</span>
+              {enviando ? (
+                <>
+                  <span className="sr-only ms-2 me-2">Enviando...</span>
+                  <Spinner className=""
+                    as="span"
+                    animation="border"
+                    size="sm"
+                    role="status"
+                    aria-hidden="true"
+                  />
+                </>
+              ) : (
+                <span className="mx-2">confirmar</span>
+              )}
             </button>
           </Col>
         </Row>
