@@ -4,6 +4,7 @@ import { UseDocumentTitle } from "../../shared/hooks/UseDocumentTitleHook";
 import { BasicTemplate } from "../../shared/components/templates/BasicTemplate/BasicTemplate";
 import { BsIcon } from "../../shared/components/atoms/BsIcon/BsIcon";
 import { EsfButton } from "../../shared/components/atoms/EsfButton/EsfButton";
+import { EsfButtonSocial } from "../../shared/components/atoms/EsfButtonSocial/EsfButtonSocial";
 //import { useNavigate } from "react-router-dom";
 
 export const WelcomePage: React.FC<{}> = () => {
@@ -55,31 +56,13 @@ export const WelcomePage: React.FC<{}> = () => {
                   <Col className="col-sm-12 text-center">
                     <ul className="list-group list-group-horizontal justify-content-center">
                       <li className="list-group-item border-0 py-2">
-                        <button
-                          type="button"
-                          className="btn btn-social btn-black bg-white bg-opacity-10 text-uppercase rounded-circle"
-                        >
-                          <BsIcon
-                            iconName="Instagram"
-                            className="fs-2"
-                          ></BsIcon>
-                        </button>
+                        <EsfButtonSocial child={<BsIcon iconName="Instagram" className="fs-2"></BsIcon>} onClick={() => { }} />
                       </li>
                       <li className="list-group-item border-0 py-2">
-                        <button
-                          type="button"
-                          className="btn btn-social btn-black bg-white bg-opacity-10 text-uppercase rounded-circle"
-                        >
-                          <BsIcon iconName="Facebook" className="fs-2"></BsIcon>
-                        </button>
+                        <EsfButtonSocial child={<BsIcon iconName="Facebook" className="fs-2"></BsIcon>} onClick={() => { }} />
                       </li>
                       <li className="list-group-item border-0 py-2">
-                        <button
-                          type="button"
-                          className="btn btn-social btn-black bg-white bg-opacity-10 text-uppercase rounded-circle"
-                        >
-                          <BsIcon iconName="Youtube" className="fs-2"></BsIcon>
-                        </button>
+                        <EsfButtonSocial child={<BsIcon iconName="Youtube" className="fs-2"></BsIcon>} onClick={() => { }} />
                       </li>
                     </ul>
                   </Col>
