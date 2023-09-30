@@ -3,9 +3,18 @@ import { Col, Container, Row } from "react-bootstrap";
 import { UseDocumentTitle } from "../../shared/hooks/UseDocumentTitleHook";
 import { BasicTemplate } from "../../shared/components/templates/BasicTemplate/BasicTemplate";
 import { BsIcon } from "../../shared/components/atoms/BsIcon/BsIcon";
+import { EsfButton } from "../../shared/components/atoms/EsfButton/EsfButton";
+//import { useNavigate } from "react-router-dom";
 
 export const WelcomePage: React.FC<{}> = () => {
   UseDocumentTitle("ESF - Bem-vindo!");
+
+  //const navigate = useNavigate();
+
+  const handleClick = () => {
+    //navigate("/...");
+  };
+
   return (
     <BasicTemplate
       isFluid={true}
@@ -88,14 +97,8 @@ export const WelcomePage: React.FC<{}> = () => {
                       confira nossas novidades!
                     </h1>
                   </Col>
-                  <Col className="col-12 col-lg-4 col-scale p-0 d-flex align-items-center justify-content-center">
-                    <button
-                      type="button"
-                      className="btn btn-black text-primary bg-black text-uppercase fw-semibold fs-4 px-4 mt-2 my-lg-2"
-                    >
-                      <span className="ms-5 me-2">ver mais</span>
-                      <BsIcon iconName="ChevronRight" className="ms-3"></BsIcon>
-                    </button>
+                  <Col className="col-12 col-lg-4 col-scale p-0 d-flex align-items-center justify-content-center pt-2 py-lg-2">
+                    <EsfButton type={"button"} text={"ver mais"} onClick={handleClick} variant="black" iconName="ChevronRight" />
                   </Col>
                 </Row>
               </Container>
