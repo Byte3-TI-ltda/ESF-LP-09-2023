@@ -32,7 +32,7 @@ export const WelcomePage: React.FC<{}> = () => {
                 </Row>
                 <Row className="justify-content-center mt-3 mt-lg-3">
                   <Col className="col-sm-12">
-                    <p className="text-center lh-1 px-3 fs-5">
+                    <p className="text-center lh-1 px-3 px-lg-4 fs-5">
                       Sua inscrição é o primeiro passo para embarcar em jornadas
                       incríveis!
                     </p>
@@ -97,7 +97,7 @@ export const WelcomePage: React.FC<{}> = () => {
                       confira nossas novidades!
                     </h1>
                   </Col>
-                  <Col className="col-12 col-lg-4 col-scale p-0 d-flex align-items-center justify-content-center pt-2 py-lg-2">
+                  <Col className="col-12 col-lg-4 col-scale p-0 d-flex align-items-center justify-content-center pt-2 py-lg-3">
                     <EsfButton type={"button"} text={"ver mais"} onClick={handleClick} variant="black" iconName="ChevronRight" />
                   </Col>
                 </Row>

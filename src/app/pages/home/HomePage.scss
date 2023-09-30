@@ -1,8 +1,15 @@
 .youtube-container {
-    width: 100%;
-    height: 180px;
+  width: 100%;
+  height: 180px;
 }
 
-.fs-custom_h{
-    font-size: 2.8rem;
+.fs-custom_h {
+  font-size: 2.8rem;
+}
+
+@media (min-width: 1200px) {
+  .youtube-container {
+    width: 100%;
+    height: 245px;
+  }
 }

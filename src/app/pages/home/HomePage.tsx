@@ -21,9 +21,10 @@ export const HomePage: React.FC<{}> = () => {
         <div className="d-flex flex-column flex-lg-column-reverse">
           <Row className="justify-content-center mt-0 mt-lg-1">
             <Col className="col-sm-12 mb-sm-2">
-              <iframe className="youtube-container border border-primary" src="https://www.youtube.com/embed/h0yPK_A1b74?si=nuwB0XcPtmQ3wOmr?&autoplay=1&mute=1"
+              <iframe className="youtube-container" src="https://www.youtube.com/embed/h0yPK_A1b74?si=nuwB0XcPtmQ3wOmr?&autoplay=1&mute=1"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen={true}
               />
             </Col>
           </Row>
@@ -51,7 +52,7 @@ export const HomePage: React.FC<{}> = () => {
           </Col>
         </Row>
       </Col>
-      <Col className="col-sm-12 col-md-10 col-lg-4 col-scale px-lg-4 d-none d-lg-block">
+      <Col className="col-sm-12 col-md-10 col-lg-4 col-scale px-lg-4 d-none d-lg-flex align-items-lg-center">
         <ApplicationForm />
       </Col>
     </Row>
