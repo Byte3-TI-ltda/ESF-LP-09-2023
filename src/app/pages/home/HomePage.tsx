@@ -48,7 +48,7 @@ export const HomePage: React.FC<{}> = () => {
 
         <Row className="d-sm-block d-lg-none justify-content-center mt-4">
           <Col className="col-sm-12 text-center">
-            <EsfButton type={"button"} text={"inscreva-se"} onClick={handleClick} />
+            <EsfButton type="button" text="inscreva-se" onClick={handleClick} />
           </Col>
         </Row>
       </Col>

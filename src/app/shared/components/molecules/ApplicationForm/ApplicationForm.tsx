@@ -4,6 +4,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { ApiService } from "../../../../services/ApiService";
 import { useState } from "react";
+import { EsfButton } from "../../atoms/EsfButton/EsfButton";
 
 type inputs = {
   firstName: string;
@@ -79,26 +80,16 @@ export const ApplicationForm: React.FC<{}> = () => {
         />
         <Row className="justify-content-center mt-4">
           <Col className="col-sm-12 d-flex justify-content-center">
-            <button
-              type="submit"
-              className="btn btn-primary text-uppercase fw-semibold fs-3 px-4 d-flex align-items-center"
-              disabled={enviando}
-            >
-              {enviando ? (
-                <>
-                  <span className="sr-only ms-2 me-2">Enviando...</span>
-                  <Spinner className=""
-                    as="span"
-                    animation="border"
-                    size="sm"
-                    role="status"
-                    aria-hidden="true"
-                  />
-                </>
-              ) : (
-                <span className="mx-2">confirmar</span>
-              )}
-            </button>
+            <EsfButton type="submit" text={enviando ? "enviando..." : "confirmar"} onSubmit={() => { }} disabled={enviando}
+              child={enviando ?
+                <Spinner className=""
+                  as="span"
+                  animation="border"
+                  size="sm"
+                  role="status"
+                  aria-hidden="true"
+                />
+                : null} />
           </Col>
         </Row>
       </Form>

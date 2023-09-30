@@ -98,7 +98,8 @@ export const WelcomePage: React.FC<{}> = () => {
                     </h1>
                   </Col>
                   <Col className="col-12 col-lg-4 col-scale p-0 d-flex align-items-center justify-content-center pt-2 py-lg-3">
-                    <EsfButton type={"button"} text={"ver mais"} onClick={handleClick} variant="black" iconName="ChevronRight" />
+                    <EsfButton type="button" text="ver mais" onClick={handleClick} variant="black"
+                      child={<BsIcon iconName="ChevronRight" />} />
                   </Col>
                 </Row>
               </Container>
