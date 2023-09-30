@@ -17,9 +17,9 @@ export const BasicTemplate: React.FC<BasicTemplateProps> = ({ children, isFluid 
   const [fluid] = useState(isFluid);
 
   return (
-    <div className="d-flex flex-column vh-100 py-2">
+    <div className="d-flex flex-column vh-100">
       <Header children={HeaderChildren()} />
-      <Container fluid={fluid} className="d-flex align-items-center justify-content-center flex-grow-1 py-lg-5">
+      <Container fluid={fluid} className={`d-flex align-items-start align-items-lg-center justify-content-center flex-grow-1 ${fluid ? 'm-0 ' : 'p-3'}`}>
         {children}
       </Container>
     </div>

@@ -11,18 +11,18 @@ export const HomeFrame: React.FC<{}> = () => {
   };
 
   return (
-    <Row className="justify-content-center justify-content-lg-around p-2">
+    <Row className="justify-content-center justify-content-lg-around">
       <Col className="col-sm-12 col-md-10 col-lg-4 col-scale px-lg-4">
         <div className="d-flex flex-column flex-lg-column-reverse">
           <Row className="justify-content-center mt-0 mt-lg-1">
             <Col className="col-sm-12 mb-sm-2">
-              <iframe className="youtube-container" src="https://www.youtube.com/embed/h0yPK_A1b74?si=nuwB0XcPtmQ3wOmr?&autoplay=1&mute=1"
+              <iframe className="youtube-container border border-primary" src="https://www.youtube.com/embed/h0yPK_A1b74?si=nuwB0XcPtmQ3wOmr?&autoplay=1&mute=1"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               />
             </Col>
           </Row>
-          <Row className="justify-content-center mt-5 mt-lg-0 mb-lg-2">
+          <Row className="justify-content-center mt-4 mt-lg-0 mb-lg-2">
             <Col className="col-sm-12 p-0">
               <h1 className="text-center mx-5 text-uppercase fs-bebas-neue lh-1 fs-custom_h">
                 sinta a emoção da descoberta
@@ -33,7 +33,7 @@ export const HomeFrame: React.FC<{}> = () => {
 
         <Row className="justify-content-center mt-4 mt-lg-1">
           <Col className="col-sm-12">
-            <p className="text-center lh-1 px-lg-2 fs-5">
+            <p className="text-center lh-1 px-2 px-lg-3 fs-5">
               Essa é a sua chance de ser um Explorador Sem Fronteiras e deixar a
               sua marca na história!
             </p>

@@ -3,5 +3,5 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ children }) => {
-  return <header className="pt-5">{children}</header>;
+  return <header className="pt-5 pb-4">{children}</header>;
 };
