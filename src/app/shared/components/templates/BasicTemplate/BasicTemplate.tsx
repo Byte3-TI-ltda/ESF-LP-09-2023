@@ -1,3 +1,4 @@
+import "./BasicTemplate.scss";
 import { Header } from "../../organisms/Header/Header";
 import { Container } from "react-bootstrap";
 import { Logo } from "../../atoms/logo/Logo";
@@ -17,7 +18,7 @@ export const BasicTemplate: React.FC<BasicTemplateProps> = ({ children, isFluid 
   const [fluid] = useState(isFluid);
 
   return (
-    <div className="d-flex flex-column vh-100">
+    <div className="d-flex flex-column vh-100 bg-basic">
       <Header children={HeaderChildren()} />
       <Container fluid={fluid} className={`d-flex align-items-start align-items-lg-center justify-content-center flex-grow-1 ${fluid ? 'm-0 ' : 'p-3'}`}>
         {children}
