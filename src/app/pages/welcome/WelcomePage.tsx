@@ -55,13 +55,13 @@ export const WelcomePage: React.FC<{}> = () => {
                 <Row className="d-sm-block justify-content-center">
                   <Col className="col-sm-12 text-center">
                     <ul className="list-group list-group-horizontal justify-content-center">
-                      <li className="list-group-item border-0 py-2">
+                      <li className="list-group-item border-0 bg-transparent py-2">
                         <EsfButtonSocial child={<BsIcon iconName="Instagram" className="fs-2"></BsIcon>} onClick={() => { }} />
                       </li>
-                      <li className="list-group-item border-0 py-2">
+                      <li className="list-group-item border-0 bg-transparent py-2">
                         <EsfButtonSocial child={<BsIcon iconName="Facebook" className="fs-2"></BsIcon>} onClick={() => { }} />
                       </li>
-                      <li className="list-group-item border-0 py-2">
+                      <li className="list-group-item border-0 bg-transparent py-2">
                         <EsfButtonSocial child={<BsIcon iconName="Youtube" className="fs-2"></BsIcon>} onClick={() => { }} />
                       </li>
                     </ul>
