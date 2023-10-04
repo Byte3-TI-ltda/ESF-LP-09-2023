@@ -1,7 +1,7 @@
 import axios, { AxiosInstance } from "axios";
 
 const apiBaseURL = (): string => {
-    return "https://esf-api-09-2023.onrender.com/";
+    return "https://esf-lp-backend.onrender.com/";
 };
 
 const create = (): AxiosInstance => {
