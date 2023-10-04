@@ -6,6 +6,8 @@ import { ApiService } from "../../../../services/ApiService";
 import { useState } from "react";
 import { EsfButton } from "../../atoms/EsfButton/EsfButton";
 
+const baseUrl = 'contacts/'
+
 type inputs = {
   firstName: string;
   lastName: string;
@@ -28,7 +30,7 @@ export const ApplicationForm: React.FC<{}> = () => {
   const onSubmit: SubmitHandler<inputs> = async (data) => {
     try {
       setEnviando(true);
-      const response = await ApiService.create().post('/endpoint', data);
+      const response = await ApiService.create().post(`${baseUrl}create`, data);
       console.log(response.data);
       navigate("/welcome");
     } catch (error) {
