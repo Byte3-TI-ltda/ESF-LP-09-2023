@@ -1,8 +1,14 @@
-button.btn.btn-social {
+button.btn.btn-social,
+a.btn.btn-social {
   height: 3.2rem;
   width: 3.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0.6rem;
+  transition: 0.3s;
+
+  &:hover {
+    transform: translate(0, -8px);
+  }
 }

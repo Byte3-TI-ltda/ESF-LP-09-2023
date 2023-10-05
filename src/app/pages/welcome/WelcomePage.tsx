@@ -56,13 +56,16 @@ export const WelcomePage: React.FC<{}> = () => {
                   <Col className="col-sm-12 text-center">
                     <ul className="list-group list-group-horizontal justify-content-center">
                       <li className="list-group-item border-0 bg-transparent py-2">
-                        <EsfButtonSocial child={<BsIcon iconName="Instagram" className="fs-2"></BsIcon>} onClick={() => { }} />
+                        <EsfButtonSocial child={<BsIcon iconName="Instagram" className="fs-2"></BsIcon>} href="https://www.instagram.com/exploradoressemfronteiras/" onClick={() => { }} />
                       </li>
                       <li className="list-group-item border-0 bg-transparent py-2">
-                        <EsfButtonSocial child={<BsIcon iconName="Facebook" className="fs-2"></BsIcon>} onClick={() => { }} />
+                        <EsfButtonSocial child={<BsIcon iconName="Tiktok" className="fs-2"></BsIcon>} href="https://www.tiktok.com/@exploradoressfronteiras" onClick={() => { }} />
                       </li>
                       <li className="list-group-item border-0 bg-transparent py-2">
-                        <EsfButtonSocial child={<BsIcon iconName="Youtube" className="fs-2"></BsIcon>} onClick={() => { }} />
+                        <EsfButtonSocial child={<BsIcon iconName="Facebook" className="fs-2"></BsIcon>} href="https://www.facebook.com/exploradoressemfronteiras/" onClick={() => { }} />
+                      </li>
+                      <li className="list-group-item border-0 bg-transparent py-2">
+                        <EsfButtonSocial child={<BsIcon iconName="Youtube" className="fs-2"></BsIcon>} href="https://www.youtube.com/@exploradoressemfronteiras/" onClick={() => { }} />
                       </li>
                     </ul>
                   </Col>
