@@ -5,8 +5,14 @@ import { useNavigate } from "react-router-dom";
 import { ApiService } from "../../../../services/ApiService";
 import { useState } from "react";
 import { EsfButton } from "../../atoms/EsfButton/EsfButton";
+import { BsIcon } from "../../atoms/BsIcon/BsIcon";
 
-const baseUrl = 'contacts/'
+enum SubmitSts {
+  STOPPED = 'STOPPED',
+  SENDING = 'SENDING',
+  CHECKED = 'CHECKED',
+  FAILED = 'FAILED'
+}
 
 type inputs = {
   firstName: string;
@@ -18,7 +24,7 @@ type inputs = {
 export const ApplicationForm: React.FC<{}> = () => {
 
   const navigate = useNavigate();
-  const [enviando, setEnviando] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<SubmitSts>(SubmitSts.STOPPED);
 
   const {
     register,
@@ -27,19 +33,41 @@ export const ApplicationForm: React.FC<{}> = () => {
     formState: { errors },
   } = useForm<inputs>();
 
+  //console.log(watch("firstName"));
+
   const onSubmit: SubmitHandler<inputs> = async (data) => {
-    try {
-      setEnviando(true);
-      const response = await ApiService.create().post(`${baseUrl}create`, data);
-      console.log(response.data);
-      navigate("/welcome");
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setEnviando(false);
+    setSubmitStatus(SubmitSts.SENDING);
+    await ApiService.create().post('contacts/create', data).then((resp: any) => {
+      setSubmitStatus(SubmitSts.CHECKED);
+      setTimeout(() => {
+        navigate("/welcome");
+      }, 1000);
+    }).catch((error: any) => {
+      setSubmitStatus(SubmitSts.FAILED);
+    }).finally(() => { });
+  }
+ 
+  const getTextBtnSubmit = (): string => {
+    switch (submitStatus) {
+      case SubmitSts.SENDING:
+        return 'enviando...'
+      case SubmitSts.CHECKED:
+        return 'enviando'
+      case SubmitSts.FAILED:
+        return 'o envio falhou'
+      default: return 'confirmar'
     }
   }
-  //console.log(watch("firstName"));
+
+  const getBsIconBtnSubmit = (): JSX.Element | null => {
+    switch (submitStatus) {
+      case SubmitSts.CHECKED:
+        return <BsIcon iconName="CheckLg" />
+      case SubmitSts.FAILED:
+        return <BsIcon iconName="BugFill" />
+      default: return null
+    }
+  }
 
   return (
     <div className="">
@@ -82,16 +110,22 @@ export const ApplicationForm: React.FC<{}> = () => {
         />
         <Row className="justify-content-center mt-4">
           <Col className="col-sm-12 d-flex justify-content-center">
-            <EsfButton type="submit" text={enviando ? "enviando..." : "confirmar"} onSubmit={() => { }} disabled={enviando}
-              child={enviando ?
-                <Spinner className=""
-                  as="span"
-                  animation="border"
-                  size="sm"
-                  role="status"
-                  aria-hidden="true"
-                />
-                : null} />
+            <EsfButton
+              type="submit"
+              text={getTextBtnSubmit()}
+              onSubmit={() => { }} disabled={submitStatus === SubmitSts.SENDING}
+              child={
+                submitStatus === SubmitSts.SENDING ?
+                  <Spinner className=""
+                    as="span"
+                    animation="border"
+                    size="sm"
+                    role="status"
+                    aria-hidden="true"
+                  />
+                  : getBsIconBtnSubmit()
+              }
+            />
           </Col>
         </Row>
       </Form>
